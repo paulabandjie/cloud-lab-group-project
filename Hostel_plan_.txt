@@ -1,0 +1,113 @@
+================================================================================
+SPEKTRONHOME HOSTEL PLAN
+================================================================================
+
+OVERVIEW
+--------
+SpektronHome is a student hostel website designed to provide information about
+the hostel, showcase facilities and rooms, and allow students to make inquiries.
+
+WEBSITE PAGES
+-------------
+
+1. Home Page (index.html)
+   - Hero section
+   - Hostel statistics
+   - Features and amenities
+   - Testimonials
+   - Call-to-action section
+
+2. About Page (about.html)
+   - Mission and vision
+   - Core values
+   - Management/team profiles
+
+3. Rooms Page (rooms.html)
+   - Room listings
+   - Private rooms
+   - Shared rooms
+   - Premium rooms
+   - Room filtering options
+
+4. Gallery Page (gallery.html)
+   - Hostel photos
+   - Room photos
+   - Facility photos
+   - Image preview/lightbox
+
+5. Contact Page (contact.html)
+   - Contact information
+   - Inquiry form
+   - Location/map section
+
+6. Login Page (login.html)
+   - Student login interface
+   - Account access portal
+
+ROOM CATEGORIES
+---------------
+- Private Rooms
+- Shared Rooms
+- Premium Rooms
+
+HOSTEL FEATURES
+---------------
+- Secure accommodation
+- Comfortable rooms
+- Study-friendly environment
+- Student community
+- Modern facilities
+- Internet access
+- Essential utilities
+
+CONTACT FORM FIELDS
+-------------------
+- First Name
+- Last Name
+- Email Address
+- Subject
+- Message
+
+LOGIN FORM FIELDS
+-----------------
+- Student ID or Email
+- Password
+- Remember Me Option
+
+PROJECT STRUCTURE
+-----------------
+    hostel-website/
+├── index.html
+├── about.html
+├── rooms.html
+├── gallery.html
+├── contact.html
+├── login.html
+├── css/
+    │   └── style.css
+├── js/
+    │   └── script.js
+└── images/
+
+FUTURE IMPROVEMENTS
+-------------------
+- Online room booking
+- Student account management
+- Real authentication system
+- Email notifications
+- Database integration
+- Mobile optimization
+- Analytics and reporting
+
+================================================================================
+END OF HOSTEL PLAN
+    ================================================================================\
+
+===============================================================
+Change
+group Name
+group members
+course title(information)
+Project description
+
+Find a place for them
