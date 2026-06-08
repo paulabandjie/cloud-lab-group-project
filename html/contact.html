@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — SpektrixHome</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+        .form-msg {
+            font-size: 0.88rem;
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 16px;
+            display: none;
+        }
+        .form-msg.success { background: rgba(45,90,71,0.1); color: var(--clr-accent); border: 1px solid rgba(45,90,71,0.25); display: block; }
+        .form-msg.error   { background: rgba(196,60,60,0.08); color: #b03030; border: 1px solid rgba(196,60,60,0.2); display: block; }
+        .map-placeholder {
+            width: 100%;
+            height: 300px;
+            background: var(--clr-hero-bg);
+            border-radius: var(--radius-md);
+            display: grid;
+            place-items: center;
+            font-size: 3rem;
+            margin-top: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        .map-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 50% 80%, rgba(196,124,62,0.15) 0%, transparent 70%);
+        }
+        .map-label {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .map-label p { color: rgba(245,240,232,0.6); font-size:0.85rem; margin-top:8px; }
+        .map-label strong { color: #f5f0e8; font-family: var(--ff-display); font-size:1.1rem; display:block; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Spektrix<span>Home</span></div>
+    <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+        <li><a href="login.html" class="login-btn">Login</a></li>
+    </ul>
+</nav>
+
+<div class="page-hero">
+    <div class="page-hero-content">
+        <span class="page-eyebrow">Get In Touch</span>
+        <h1>Contact Us</h1>
+        <p>Questions about booking, availability, or anything else — we're here to help.</p>
+    </div>
+</div>
+
+<section class="section">
+    <div class="section-inner">
+        <div class="contact-grid">
+
+            <!-- Info column -->
+            <div class="reveal">
+                <h3>We'd Love to Hear From You</h3>
+                <p>Fill in the form and our team will get back to you within 24 hours. Or reach us directly using the details below.</p>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">📍</div>
+                    <div>
+                        <div class="contact-detail-label">Address</div>
+                        <div class="contact-detail-value">123 Campus Road, University Area, Accra, Ghana</div>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">📞</div>
+                    <div>
+                        <div class="contact-detail-label">Phone</div>
+                        <div class="contact-detail-value">+233 20 000 0000</div>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">✉️</div>
+                    <div>
+                        <div class="contact-detail-label">Email</div>
+                        <div class="contact-detail-value">hello@spektrixhome.com</div>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">🕐</div>
+                    <div>
+                        <div class="contact-detail-label">Office Hours</div>
+                        <div class="contact-detail-value">Mon – Fri: 8:00 AM – 6:00 PM<br>Sat: 9:00 AM – 1:00 PM</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form column -->
+            <div class="form-card reveal">
+                <h2 class="form-title">Send a Message</h2>
+                <div class="form-msg" id="contact-msg"></div>
+
+                <form id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" placeholder="e.g. Kofi" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" placeholder="e.g. Mensah" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="your@email.com" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject">
+                            <option value="" disabled selected>Select a topic…</option>
+                            <option>Room Availability</option>
+                            <option>Booking Enquiry</option>
+                            <option>Pricing Information</option>
+                            <option>Maintenance Request</option>
+                            <option>General Question</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Tell us how we can help…" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message →</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="map-placeholder reveal">
+            <div class="map-label">
+                <div style="font-size:3rem;">📍</div>
+                <strong>SpektrixHome · 123 Campus Road</strong>
+                <p>Accra, Ghana · 5 minutes walk from the main campus gate</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div><div class="footer-brand">Spektrix<span>Home</span></div><p class="footer-desc">Safe, affordable student accommodation since 2018.</p></div>
+            <div class="footer-col"><h4>Navigate</h4><ul><li><a href="../index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="rooms.html">Rooms</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+            <div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="login.html">Student Login</a></li></ul></div>
+            <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📍 123 Campus Road</a></li><li><a href="#">📞 +233 20 000 0000</a></li><li><a href="#">✉️ hello@hostelhub.com</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 SpektrixHome. All Rights Reserved.</span><span>Made with ❤️ for students</span></div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

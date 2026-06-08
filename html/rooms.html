@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rooms — SpektrixHome</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+        .filter-bar {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+        .filter-btn {
+            font-family: var(--ff-body);
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 100px;
+            border: 1.5px solid var(--clr-border);
+            background: transparent;
+            color: var(--clr-muted);
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--clr-primary);
+            border-color: var(--clr-primary);
+            color: #fff;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--clr-accent);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 100px;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+        .badge.popular { background: var(--clr-primary); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Spektrix<span>Home</span></div>
+    <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rooms.html" class="active">Rooms</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="login.html" class="login-btn">Login</a></li>
+    </ul>
+</nav>
+
+<div class="page-hero">
+    <div class="page-hero-content">
+        <span class="page-eyebrow">Accommodation</span>
+        <h1>Find Your Room</h1>
+        <p>From budget-friendly dorms to private studios — every room is clean, furnished, and Wi-Fi ready.</p>
+    </div>
+</div>
+
+<section class="section">
+    <div class="section-inner">
+
+        <!-- Filter -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All Rooms</button>
+            <button class="filter-btn" data-filter="private">Private</button>
+            <button class="filter-btn" data-filter="shared">Shared</button>
+            <button class="filter-btn" data-filter="premium">Premium</button>
+        </div>
+
+        <div class="rooms-grid" id="rooms-grid">
+
+            <!-- Single Room -->
+            <div class="room-card reveal" data-type="private">
+                <div class="room-card-img">
+                    <img src="../images/room-single.jpg" alt="Single Room" />
+                </div>
+                <div class="room-card-body">
+                    <span class="badge popular">Most Popular</span>
+                    <p class="room-type">Private</p>
+                    <h3>Single Room</h3>
+                    <p>A cozy private room with a study desk, wardrobe, and natural lighting. Quiet and perfect for focused students.</p>
+                    <div class="room-price"><strong>$100</strong><span>/ month</span></div>
+                    <div class="room-amenities">
+                        <span class="tag">En-suite Bath</span>
+                        <span class="tag">Study Desk</span>
+                        <span class="tag">Wardrobe</span>
+                        <span class="tag">Wi-Fi</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Book This Room</a>
+                </div>
+            </div>
+
+            <!-- Double Room -->
+            <div class="room-card reveal" data-type="shared">
+                <div class="room-card-img">
+                    <img src="../images/room-double.jpg" alt="Double Room"  />
+                </div>
+                <div class="room-card-body">
+                    <p class="room-type">Shared</p>
+                    <h3>Double Room</h3>
+                    <p>Share with a fellow student. Spacious, well-lit, and great value for those who don't mind company.</p>
+                    <div class="room-price"><strong>$65</strong><span>/ month per person</span></div>
+                    <div class="room-amenities">
+                        <span class="tag">Shared Bath</span>
+                        <span class="tag">2 Study Desks</span>
+                        <span class="tag">Wi-Fi</span>
+                        <span class="tag">2 Wardrobes</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Book This Room</a>
+                </div>
+            </div>
+
+            <!-- Dorm -->
+            <div class="room-card reveal" data-type="shared">
+                <div class="room-card-img">
+                    <img src="../images/room-dorm.jpg" alt="4-Bed Dormitory" />
+                </div>
+                <div class="room-card-body">
+                    <span class="badge">Best Value</span>
+                    <p class="room-type">Shared</p>
+                    <h3>4-Bed Dormitory</h3>
+                    <p>Our most affordable option. Bunk beds, shared bathroom, and a lively communal atmosphere.</p>
+                    <div class="room-price"><strong>$40</strong><span>/ month per person</span></div>
+                    <div class="room-amenities">
+                        <span class="tag">Shared Bath</span>
+                        <span class="tag">Locker Storage</span>
+                        <span class="tag">Wi-Fi</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Book This Room</a>
+                </div>
+            </div>
+
+            <!-- Studio -->
+            <div class="room-card reveal" data-type="premium">
+                <div class="room-card-img">
+                    <img src="../images/room-studio.jpg" alt="Studio Suite" />
+                </div>
+                <div class="room-card-body">
+                    <span class="badge" style="background:#8b6914;">Premium</span>
+                    <p class="room-type">Premium</p>
+                    <h3>Studio Suite</h3>
+                    <p>A self-contained studio with kitchenette, private bath, smart TV, and premium furnishings.</p>
+                    <div class="room-price"><strong>$180</strong><span>/ month</span></div>
+                    <div class="room-amenities">
+                        <span class="tag">Kitchenette</span>
+                        <span class="tag">Private Bath</span>
+                        <span class="tag">Smart TV</span>
+                        <span class="tag">Wi-Fi</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Book This Room</a>
+                </div>
+            </div>
+
+            <!-- Deluxe Single -->
+            <div class="room-card reveal" data-type="premium">
+                <div class="room-card-img">
+                    <img src="../images/room-deluxe.jpg" alt="Deluxe Single Room" />
+                </div>
+                <div class="room-card-body">
+                    <span class="badge" style="background:#8b6914;">Premium</span>
+                    <p class="room-type">Premium · Private</p>
+                    <h3>Deluxe Single</h3>
+                    <p>Larger than a standard single, with an ergonomic chair, air conditioning, and a double bed.</p>
+                    <div class="room-price"><strong>$145</strong><span>/ month</span></div>
+                    <div class="room-amenities">
+                        <span class="tag">Air Conditioning</span>
+                        <span class="tag">Double Bed</span>
+                        <span class="tag">En-suite</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Book This Room</a>
+                </div>
+            </div>
+
+            <!-- Triple -->
+            <div class="room-card reveal" data-type="shared">
+                <div class="room-card-img">
+                    <img src="../images/room-triple.jpg" alt="Triple Room" />
+                </div>
+                <div class="room-card-body">
+                    <p class="room-type">Shared</p>
+                    <h3>Triple Room</h3>
+                    <p>Three beds, three desks, and room to breathe. Great for friend groups who want to room together.</p>
+                    <div class="room-price"><strong>$55</strong><span>/ month per person</span></div>
+                    <div class="room-amenities">
+                        <span class="tag">Shared Bath</span>
+                        <span class="tag">3 Desks</span>
+                        <span class="tag">Wi-Fi</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Book This Room</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Inclusions strip -->
+<section class="section" style="background:#f0ede8;">
+    <div class="section-inner">
+        <div class="section-header">
+            <p class="section-eyebrow">Every Room Includes</p>
+            <h2>Standard in All Rooms</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal"><div class="feature-icon">📶</div><h3>High-Speed Wi-Fi</h3><p>Fibre-backed internet to every room.</p></div>
+            <div class="feature-card reveal"><div class="feature-icon">🧹</div><h3>Weekly Cleaning</h3><p>Common areas and bathrooms cleaned daily.</p></div>
+            <div class="feature-card reveal"><div class="feature-icon">💡</div><h3>All Utilities</h3><p>Electricity and water included in rent.</p></div>
+            <div class="feature-card reveal"><div class="feature-icon">🔧</div><h3>24/7 Maintenance</h3><p>Report issues and get them fixed fast.</p></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div>
+                <div class="footer-brand">Spektrix<span>Home</span></div>
+                <p class="footer-desc">Safe, affordable, and comfortable student accommodation since 2018.</p>
+            </div>
+            <div class="footer-col"><h4>Navigate</h4><ul><li><a href="../index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="rooms.html">Rooms</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+            <div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="login.html">Student Login</a></li></ul></div>
+            <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📍 123 Campus Road</a></li><li><a href="#">📞 +233 20 000 0000</a></li><li><a href="#">✉️ hello@spektrixhome.com</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 SpektrixHome. All Rights Reserved.</span><span>Made with ❤️ for students</span></div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script>
+    // Filter functionality
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const roomCards  = document.querySelectorAll(".room-card");
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            filterBtns.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            const filter = btn.dataset.filter;
+            roomCards.forEach(card => {
+                const show = filter === "all" || card.dataset.type === filter;
+                card.style.display = show ? "block" : "none";
+            });
+        });
+    });
+</script>
+</body>
+</html>
